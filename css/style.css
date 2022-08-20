@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+/* ----CSS Reset----- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----CSS Custom Properties---- */
+:root {
+  /* Colors */
+  --color-primary-500: hsl(0, 93%, 68%);
+  --color-primary-300: hsl(0, 36%, 70%);
+
+  --color-neutral-600: hsl(0, 6%, 24%);
+
+  --gradient-500: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+  --gradient-200: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+
+  /* Font Families */
+  --ff-primary: "Josefin Sans", sans-serif;
+
+  /* Font Weights */
+  --fw-semi-bold: 600;
+  --fw-regular: 400;
+  --fw-light: 300;
+
+  /* Font Sizes */
+  --fs-large: 3.5rem;
+  --fs-small: 0.875rem;
+}
+
+/* ----Utility Clases---- */
+.grid {
+  display: grid;
+  grid-template-columns: 2.5fr 1.6fr;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  border-radius: var(--radius);
+  border: none;
+  box-shadow: -2px 0px 10px 0px #75636399;
+  cursor: pointer;
+}
+
+/* Font Family */
+.ff-primary {
+  font-family: var(--ff-primary);
+}
+
+/* Font Weights */
+.fw-light {
+  font-weight: var(--fw-light);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+
+/* Font Sizes */
+.fs-small {
+  font-size: var(--fs-small);
+}
+
+.fs-large {
+  font-size: var(--fs-large);
+}
+
+/* Font Colors */
+.color-primary-300 {
+  color: var(--color-primary-300);
+}
+
+.color-neutral-600 {
+  color: var(--color-neutral-600);
+}
+
+body {
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-size: cover;
+}
+
+/* ----Main Section---- */
+.grid-item {
+  position: relative;
+  padding-top: 3rem;
+}
+
+.grid-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.logo {
+  width: 30vw;
+  margin: auto;
+}
+
+.intro-img-mob {
+  display: none;
+  margin-bottom: 3rem;
+}
+
+.intro-img {
+  background: url(../images/hero-desktop.jpg) no-repeat center center/cover;
+  grid-column: 2 / 3;
+}
+
+.desc {
+  width: 30vw;
+  margin: 6rem auto;
+}
+
+.desc h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.245em;
+}
+
+.desc p {
+  margin-block: 1rem;
+  line-height: 22px;
+}
+
+form {
+  --padding: 1rem;
+  --radius: 30px;
+
+  width: inherit;
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+form input {
+  width: 100%;
+  padding: var(--padding);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-primary-300);
+}
+
+input[type="email"]:invalid {
+  border: 1px solid var(--color-primary-500);
+  background-image: url("/images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: 70%;
+}
+
+form input:focus-visible {
+  outline: 1px solid var(--color-primary-500);
+}
+
+form .btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 7vw;
+  font-size: 1.5rem;
+  background: url(../images/icon-arrow.svg) no-repeat center center,
+    linear-gradient(var(--gradient-500));
+}
+
+form .btn:hover {
+  outline: 1px solid hsl(0, 76.3%, 81.8%);
+  box-shadow: -2px 5px 10px 5px #75636399;
+}
+
+.desc .error-message {
+  visibility: hidden;
+  font-size: small;
+  margin: 0.3rem 1rem;
+  color: var(--color-primary-500);
+}
+
+/* ----Footer---- */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  background-image: var(--gradient-500);
+}
+.attribution a {
+  color: var(--color-primary-500)
+}
+
+/* ----Media Quries---- */
+@media screen and (max-width: 40em) {
+  /* ----Custom Css Properties---- */
+  :root {
+    /* Font Sizes */
+    --fs-large: 2.5rem;
+    --fs-small: 0.875rem;
+  }
+
+  .logo {
+    margin: auto 30px;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .intro-img-mob {
+    display: block;
+  }
+
+  .intro-img {
+    display: none;
+  }
+
+  .desc {
+    width: 80vw;
+    margin: 4rem auto;
+    text-align: center;
+  }
+
+  form .btn{
+    width: 18vw;
+  }
+
+  .desc .error-message{
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  /* Utility Classes */
+  .grid {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+
+  .flex {
+    align-items: center;
+  }
+}
