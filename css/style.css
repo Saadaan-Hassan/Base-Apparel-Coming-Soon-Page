@@ -156,7 +156,7 @@ form input {
 
 input[type="email"]:invalid {
   border: 1px solid var(--color-primary-500);
-  background-image: url("/images/icon-error.svg");
+  background-image: url("../images/icon-error.svg");
   background-repeat: no-repeat;
   background-position: 70%;
 }
