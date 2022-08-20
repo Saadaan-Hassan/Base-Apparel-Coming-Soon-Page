@@ -42,8 +42,8 @@ Following are some screenshots of the projects:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [Base Apparel Coming Soon Page](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-base-apparel-coming-soon-page-by-using-css-grid-and-flexbox-lyZ58q9QiJ)
+- Live Site URL: [Base Apparel Coming Soon Page](https://saadaan-hassan.github.io/Base-Apparel-Coming-Soon-Page/)
 
 ## My process
 
